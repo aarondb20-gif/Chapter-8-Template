@@ -3,6 +3,9 @@ public abstract class VehicleReport {
         collectData();
         formatReport();
         logStatus();
+        if(shouldCheckMaintenance()){
+            performMaintenanceCheck();
+        }
     }
     protected void collectData(){
         System.out.println("Fetching GPS data...");
@@ -13,5 +16,10 @@ public abstract class VehicleReport {
 
         System.out.println("Log entry created.");
     }
-
+    protected void performMaintenanceCheck(){
+        System.out.println("Performing Maintenance Check.");
+    }
+    protected boolean shouldCheckMaintenance(){
+        return true;
+    }
 }

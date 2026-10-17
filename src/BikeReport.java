@@ -3,4 +3,8 @@ public class BikeReport extends VehicleReport{
     protected void formatReport() {
         System.out.println("Bike Report: Formatting lightweight parcel dimensions.");
     }
+    @Override
+    protected boolean shouldCheckMaintenance(){
+        return false;
+    }
 }
