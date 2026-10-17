@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println("Hello World!");
+        VehicleReport truck = new TruckReport();
+        truck.generateReport();
+        VehicleReport bike = new BikeReport();
+        bike.generateReport();
     }
 }
